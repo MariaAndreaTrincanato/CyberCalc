@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cyber Calculator</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="./calc.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="displayScreen">
+      <div id="borderWhite">
+        <span id="numberRes">0</span>
+      </div>
+    </div>
+    <div class="gridContainer">
+      <button class="grid-item" type="button" id="btn_erase">
+        <div>AC</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_sign">
+        <div>+/-</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_perc">
+        <div>%</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_division">
+        <div>/</div>
+      </button>
+      <button class="grid-item" type="button" id="button7">
+        <div>7</div>
+      </button>
+      <button class="grid-item" type="button" id="button8">
+        <div>8</div>
+      </button>
+      <button class="grid-item" type="button" id="button9">
+        <div>9</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_product">
+        <div>X</div>
+      </button>
+      <button class="grid-item" type="button" id="button4">
+        <div>4</div>
+      </button>
+      <button class="grid-item" type="button" id="button5">
+        <div>5</div>
+      </button>
+      <button class="grid-item" type="button" id="button6">
+        <div>6</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_minus">
+        <div>-</div>
+      </button>
+      <button class="grid-item" type="button" id="button1">
+        <div>1</div>
+      </button>
+      <button class="grid-item" type="button" id="button2">
+        <div>2</div>
+      </button>
+      <button class="grid-item" type="button" id="button3">
+        <div>3</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_plus">
+        <div>+</div>
+      </button>
+      <button class="grid-item" type="button" id="button0">
+        <div>0</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_coma">
+        <div>,</div>
+      </button>
+      <button class="grid-item" type="button" id="btn_result">
+        <div>=</div>
+      </button>
+    </div>
+
+    <script type="text/javascript" src="./calc.js">
+
+    </script>
+  </body>
+</html>

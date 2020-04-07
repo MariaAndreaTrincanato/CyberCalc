@@ -1,0 +1,18 @@
+{
+  "name": "cybercalc",
+  "version": "1.0.0",
+  "description": "A simple cyber themed calculator",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "run test"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "Maria Andrea Trincanato",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.1"
+  }
+}
