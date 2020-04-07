@@ -16,7 +16,7 @@ function createWindow () {
   win.loadFile('calc.html')
 
   // Apre il Pannello degli Strumenti di Sviluppo.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

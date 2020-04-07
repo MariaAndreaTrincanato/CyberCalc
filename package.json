@@ -2,6 +2,7 @@
   "name": "cybercalc",
   "version": "1.0.0",
   "description": "A simple cyber themed calculator",
+  "productName": "CyberCalc",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
