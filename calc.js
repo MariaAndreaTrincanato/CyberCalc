@@ -31,7 +31,10 @@ result = document.getElementById('numberRes');
 //VARIABLES
 var currentNumber=[];
 var resultNumber = 0;
-
+var isPlus = false;
+var isMinus = false;
+var isProduct = false;
+var isDivision = false;
 
 
 //LISTENERS
@@ -41,79 +44,147 @@ var resultNumber = 0;
 btn0.addEventListener('click', function(){
   currentNumber.push(0);
   console.log('Entered 0')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn1.addEventListener('click', function(){
   currentNumber.push(1);
   console.log('Entered 1')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn2.addEventListener('click', function(){
   currentNumber.push(2);
   console.log('Entered 2')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn3.addEventListener('click', function(){
   currentNumber.push(3);
   console.log('Entered 3')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn4.addEventListener('click', function(){
   currentNumber.push(4);
   console.log('Entered 4')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn5.addEventListener('click', function(){
   currentNumber.push(5);
   console.log('Entered 5')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn6.addEventListener('click', function(){
   currentNumber.push(6);
   console.log('Entered 6')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn7.addEventListener('click', function(){
   currentNumber.push(7);
   console.log('Entered 7')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn8.addEventListener('click', function(){
   currentNumber.push(8);
   console.log('Entered 8')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 btn9.addEventListener('click', function(){
   currentNumber.push(9);
   console.log('Entered 9')
-  result.innerHTML = currentNumber;
+  result.innerHTML = currentNumber.join('');
 });
 
 //------------------------------------------------------------------------------
 //operations
 btnPlus.addEventListener('click', function(){
-  console.log('Pressed the \"plus\" operator')
+  if(isPlus){
+    result.innerHTML = (Number(memNumber) + Number(result.innerHTML));
+  }else if(isMinus){
+    result.innerHTML = (Number(memNumber) - Number(result.innerHTML));
+  }else if(isProduct){
+    result.innerHTML = (Number(memNumber) * Number(result.innerHTML));
+  }else if(isDivision){
+    result.innerHTML = (Number(memNumber) / Number(result.innerHTML));
+  }
+
+  isPlus = true;
+  isMinus = false;
+  isProduct = false;
+  isDivision = false;
+
+  memNumber = result.innerHTML;
+  currentNumber = [];
+  console.log('Pressed the \"plus\" operator'+','+isPlus)
 });
 
 btnMinus.addEventListener('click', function(){
-  console.log('Pressed the \"minus\" operator')
+  if(isPlus){
+    result.innerHTML = (Number(memNumber) + Number(result.innerHTML));
+  }else if(isMinus){
+    result.innerHTML = (Number(memNumber) - Number(result.innerHTML));
+  }else if(isProduct){
+    result.innerHTML = (Number(memNumber) * Number(result.innerHTML));
+  }else if(isDivision){
+    result.innerHTML = (Number(memNumber) / Number(result.innerHTML));
+  }
+
+  isPlus = false;
+  isMinus = true;
+  isProduct = false;
+  isDivision = false;
+
+  memNumber = result.innerHTML;
+  currentNumber = [];
+  console.log('Pressed the \"minus\" operator'+','+isMinus)
 });
 
 btnProduct.addEventListener('click', function(){
-  console.log('Pressed the \"product\" operator')
+  if(isPlus){
+    result.innerHTML = (Number(memNumber) + Number(result.innerHTML));
+  }else if(isMinus){
+    result.innerHTML = (Number(memNumber) - Number(result.innerHTML));
+  }else if(isProduct){
+    result.innerHTML = (Number(memNumber) * Number(result.innerHTML));
+  }else if(isDivision){
+    result.innerHTML = (Number(memNumber) / Number(result.innerHTML));
+  }
+
+  isPlus = false;
+  isMinus = false;
+  isProduct = true;
+  isDivision = false;
+
+  memNumber = result.innerHTML;
+  currentNumber = [];
+  console.log('Pressed the \"product\" operator'+','+isProduct)
 });
 
 btnDivision.addEventListener('click', function(){
-  console.log('Pressed the \"division\" operator')
+  if(isPlus){
+    result.innerHTML = (Number(memNumber) + Number(result.innerHTML));
+  }else if(isMinus){
+    result.innerHTML = (Number(memNumber) - Number(result.innerHTML));
+  }else if(isProduct){
+    result.innerHTML = (Number(memNumber) * Number(result.innerHTML));
+  }else if(isDivision){
+    result.innerHTML = (Number(memNumber) / Number(result.innerHTML));
+  }
+
+  isPlus = false;
+  isMinus = false;
+  isProduct = false;
+  isDivision = true;
+
+  memNumber = result.innerHTML;
+  currentNumber = [];
+  console.log('Pressed the \"division\" operator'+','+isDivision)
 });
 
 //------------------------------------------------------------------------------
@@ -124,19 +195,39 @@ btnErase.addEventListener('click', function(){
 });
 
 btnPercent.addEventListener('click', function(){
+  result.innerHTML = result.innerHTML/100;
   console.log('Transformed into percents');
 });
 
 btnComa.addEventListener('click', function(){
+  currentNumber.push('.');
+  result.innerHTML = currentNumber.join('');
   console.log('Added coma to number');
 });
 
 btnSign.addEventListener('click', function(){
-  resultNumber = resultNumber * (-1);
+  result.innerHTML = result.innerHTML*(-1);
   console.log('Changed sign to number');
 });
 
 btnRes.addEventListener('click', function(){
+  if(isPlus){
+    result.innerHTML = (Number(memNumber) + Number(result.innerHTML));
+  }else if(isMinus){
+    result.innerHTML = (Number(memNumber) - Number(result.innerHTML));
+  }else if(isProduct){
+    result.innerHTML = (Number(memNumber) * Number(result.innerHTML));
+  }else if(isDivision){
+    result.innerHTML = (Number(memNumber) / Number(result.innerHTML));
+  }
+
+  isPlus = false;
+  isMinus = false;
+  isProduct = false;
+  isDivision = false;
+
+  memNumber = result.innerHTML;
+  currentNumber = [];
 
   console.log('Execute operations and display the final number');
 });
