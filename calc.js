@@ -48,54 +48,81 @@ btn0.addEventListener('click', function(){
 });
 
 btn1.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(1);
   console.log('Entered 1')
   result.innerHTML = currentNumber.join('');
 });
 
 btn2.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(2);
   console.log('Entered 2')
   result.innerHTML = currentNumber.join('');
 });
 
 btn3.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(3);
   console.log('Entered 3')
   result.innerHTML = currentNumber.join('');
 });
 
 btn4.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(4);
   console.log('Entered 4')
   result.innerHTML = currentNumber.join('');
 });
 
 btn5.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(5);
   console.log('Entered 5')
   result.innerHTML = currentNumber.join('');
 });
 
 btn6.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(6);
   console.log('Entered 6')
   result.innerHTML = currentNumber.join('');
 });
 
 btn7.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(7);
   console.log('Entered 7')
   result.innerHTML = currentNumber.join('');
 });
 
 btn8.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(8);
   console.log('Entered 8')
   result.innerHTML = currentNumber.join('');
 });
 
 btn9.addEventListener('click', function(){
+  if(currentNumber[0]==0 && currentNumber.length==1){
+    currentNumber = []
+  }
   currentNumber.push(9);
   console.log('Entered 9')
   result.innerHTML = currentNumber.join('');
@@ -190,6 +217,7 @@ btnDivision.addEventListener('click', function(){
 //------------------------------------------------------------------------------
 //calc functions buttons
 btnErase.addEventListener('click', function(){
+  currentNumber = [];
   result.innerHTML = 0;
   console.log('Erased the content');
 });

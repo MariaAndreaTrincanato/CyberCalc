@@ -1,0 +1,25 @@
+directories:
+  output: release
+appId: com.MariaAndreaTrincanato.cybercalc
+productName: CyberCalc
+files:
+  - dist/
+  - from: dist/
+    to: "."
+    filter: index.js
+  - resources/
+  - calc.html
+  - embedded.provisionprofile
+mac:
+  category: public.app-category.productivity
+  entitlements: build/entitlements.mac.plist
+  target:
+    - pkg
+    - dmg
+    - zip
+    - mas
+mas:
+  type: distribution
+  category: public.app-category.productivity
+  entitlements: build/entitlements.mas.plist
+
